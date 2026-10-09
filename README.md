@@ -1,19 +1,28 @@
 # Demo Yuxtapose
 
-Aplicación web estática para comparar imágenes históricas (2010 vs 2022) del sector Hacienda Carcelén - Río Monjas usando Juxtapose.
+Aplicación web estática que permite comparar con un deslizador imágenes aéreas históricas (2010 vs 2022) del sector Hacienda Carcelén - Río Monjas, en Quito, usando [Juxtapose](https://juxtapose.knightlab.com/). Está hecha con HTML, CSS y JavaScript puro: no requiere build, backend ni dependencias externas.
 
-## Mejoras aplicadas
+## Requisitos
 
-- Reorganización a estructura limpia por capas (`app`, `config`, `styles`, `assets`, `vendor`).
-- Eliminación de código inline en `index.html`.
-- Eliminación de dependencias de CDN: Juxtapose ahora se carga en local desde `src/vendor/`.
-- Eliminación de archivos duplicados en `optimized_images/`.
-- Corrección de textos y codificación UTF-8 en scripts.
-- Remoción del logo del Municipio de Quito en la interfaz.
-- Rediseño UI sobrio y usable (jerarquía visual, tarjetas limpias y mejor legibilidad).
-- Selector de estilos visuales: `compact` y `editorial`.
-- Persistencia de preferencia de layout en `localStorage` (`ui-layout`).
-- README y licencia actualizados.
+- Un navegador moderno (Chrome, Firefox, Edge, Safari).
+- Opcional: Python 3 (o cualquier servidor estático) si prefieres servir el proyecto por HTTP.
+
+## Cómo ejecutarlo
+
+```bash
+git clone https://github.com/faustoaguanor/DemoYuxtapose.git
+cd DemoYuxtapose
+```
+
+**Opción A – Directo en el navegador:** abre `index.html` con doble clic (funciona sin servidor).
+
+**Opción B – Servidor local:**
+
+```bash
+python3 -m http.server 8000
+```
+
+Luego visita <http://localhost:8000>.
 
 ## Estructura del proyecto
 
@@ -46,9 +55,8 @@ DemoYuxtapose/
 
 ## Cómo usar
 
-1. Abre `index.html` en un navegador moderno.
-2. Mueve el deslizador para comparar ambas fechas.
-3. Cambia entre `Compacto` y `Editorial` desde el selector superior.
+1. Mueve el deslizador para comparar ambas fechas.
+2. Cambia entre `Compacto` y `Editorial` desde el selector superior.
 
 ## Mantenimiento
 
@@ -56,6 +64,19 @@ DemoYuxtapose/
 - Para ajustes visuales, edita `src/styles/main.css`.
 - El código de inicialización y ajuste responsive del slider vive en `src/app/main.js`.
 - El comportamiento del selector de estilos (`compact`/`editorial`) también está en `src/app/main.js`.
+
+## Historial de mejoras
+
+- Reorganización a estructura limpia por capas (`app`, `config`, `styles`, `assets`, `vendor`).
+- Eliminación de código inline en `index.html`.
+- Eliminación de dependencias de CDN: Juxtapose ahora se carga en local desde `src/vendor/`.
+- Eliminación de archivos duplicados en `optimized_images/`.
+- Corrección de textos y codificación UTF-8 en scripts.
+- Remoción del logo del Municipio de Quito en la interfaz.
+- Rediseño UI sobrio y usable (jerarquía visual, tarjetas limpias y mejor legibilidad).
+- Selector de estilos visuales: `compact` y `editorial`.
+- Persistencia de preferencia de layout en `localStorage` (`ui-layout`).
+- README y licencia actualizados.
 
 ## Créditos y atribución
 
